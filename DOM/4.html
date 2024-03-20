@@ -26,7 +26,34 @@
         // this is optimized
         documnet.querySelector('.language').appendChild(li)
     }
-    addOptLang('py')
+    addlanguage("py")
+    addlanguage("ts")
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptLang('golang')
+
+    //Edit
+    document.querySelector("li-nth-child(2)")
+    secondLang.innerHTML = "Mojo"
+
+    //Second Approch
+
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    //Edit
+    const firstLang = document.querySelector("li-first-child")
+    firstLang.outerHTML = '<li>Typescript</li>'
+
+    // remove
+    const lastLang = document.querySelector("li-last-child")
+    lastLang.remove()
+
 
 </script>
 </html>
